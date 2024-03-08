@@ -6,3 +6,4 @@ module.exports = {
   },
   plugins: [],
 }
+// npx tailwindcss -i ./taller3/users/tailwind/input.css -o ./taller3/users/tailwind/tailwind.css --watch
