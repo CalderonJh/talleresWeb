@@ -7,55 +7,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <title>User</title>
 </head>
 <body>
 <div class="container mt-5">
     <div class="input-group">
         <h2>Datos de registro de usuario</h2>
-        <form class="input-group mt-2">
+        <form class="input-group mt-2" id="user-form">
             <div class="row w-100 m-2">
                 <div class="col-4">
                     <input type="text" class="form-control" placeholder="Nombres" id="name" name="name">
+                    <small id="name-error" class="text-danger d-none"></small>
                 </div>
                 <div class="col-4">
-                    <input type="text" class="form-control" placeholder="Apellidos" id="lastname" name="lastname">
+                    <input type="text" class="form-control" placeholder="Apellidos" id="last-name" name="lastname">
+                    <small id="last-name-error" class="text-danger d-none"></small>
                 </div>
             </div>
             <div class="row w-100 m-2">
                 <div class="col-8">
                     <input type="text" class="form-control" placeholder="Direccion" id="address" name="address">
+                    <small id="address-error" class="text-danger d-none"></small>
                 </div>
             </div>
             <div class="row w-100 m-2">
                 <div class="col-3">
-                    <select class="form-select" id="document-type" name="address">
+                    <select class="form-select" id="document-type">
                         <option selected>Seleccione...</option>
                         <option value="1">Cédula de Ciudadanía</option>
                         <option value="2">Tarjeta de Identidad</option>
                         <option value="3">Cédula de Extranjería</option>
                     </select>
+                    <small id="document-type-error" class="text-danger d-none"></small>
                 </div>
                 <div class="col-5">
                     <input type="text" class="form-control" placeholder="Número de documento" id="document-number">
+                    <small id="document-number-error" class="text-danger d-none"></small>
                 </div>
 
             </div>
             <div class="row w-100 m-2">
                 <div class="col-3">
                     <input type="text" class="form-control" placeholder="Telefono" id="phone">
+                    <small id="phone-error" class="text-danger d-none"></small>
                 </div>
                 <div class="col-5">
-                    <input type="email" class="form-control" placeholder="Email" id="email">
+                    <input type="text" class="form-control" placeholder="Email" id="email">
+                    <small id="email-error" class="text-danger d-none"></small>
                 </div>
             </div>
             <div class="row w-100 m-2">
                 <span class="mt-3 mb-1">Crear Contraseña</span>
                 <div class="col-4">
                     <input type="password" class="form-control" placeholder="Contraseña" id="password">
+                    <small id="password-error" class="text-danger d-none"></small>
                 </div>
                 <div class="col-4">
                     <input type="password" class="form-control" placeholder="Confirmar contraseña" id="confirm-password">
+                    <small id="confirm-password-error" class="text-danger d-none"></small>
                 </div>
             </div>
             <div class="row w-100 m-2">
@@ -66,5 +76,6 @@
         </form>
     </div>
 </div>
+<script src="../../../taller4/validation.js"></script>
 </body>
 </html>
