@@ -9,8 +9,46 @@
 </head>
 
 <body>
+    <h2>Registro de Gustos</h2>
+    <form>
+        <label for="color-favorito">Color Favorito:</label><br>
+        <input type="radio" id="color-favorito" name="color" value="rojo">
+        <label for="color-favorito">Rojo</label><br>
+        <input type="radio" id="color-favorito" name="color" value="azul">
+        <label for="color-favorito">Azul</label><br>
+        <input type="radio" id="color-favorito" name="color" value="verde">
+        <label for="color-favorito">Verde</label><br>
 
-    <!-- Esta es la barra -->
+        <div id="registro-gustos" style="display: none;">
+            <label for="marca-favorita">Marca de Carro Favorita:</label>
+            <input type="text" id="marca-favorita" name="marca-favorita"><br>
+
+            <label for="estilo-favorito">Estilo de Carro Favorito:</label>
+            <input type="text" id="estilo-favorito" name="estilo-favorito"><br>
+
+            <label for="modelo-favorito">Modelo de Carro Favorito:</label>
+            <input type="text" id="modelo-favorito" name="modelo-favorito"><br>
+        </div>
+
+        <input type="radio" id="habilitar-registro" name="habilitar" onclick="mostrarRegistro()">
+        <label for="habilitar-registro">Habilitar Registro de Gustos</label><br>
+
+        <button type="submit">Guardar</button>
+    </form>
+
+    <script>
+        function mostrarRegistro() {
+            var registroGustos = document.getElementById('registro-gustos');
+            var habilitarRegistro = document.getElementById('habilitar-registro');
+
+            if (habilitarRegistro.checked) {
+                registroGustos.style.display = 'block';
+            } else {
+                registroGustos.style.display = 'none';
+            }
+        }
+    </script>
+
     <div style="width: 200px; margin: 150px auto;">
         <label for="price-range">Valor Maximo y Minimo:</label>
         <br>
