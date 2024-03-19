@@ -13,8 +13,8 @@
 <body>
     <div class="container mt-5">
         <h2>Registro de Carros</h2>
-        <form class="row g-3 align-items-end">
-            <div class="col-md-4">
+        <form class="row g-3">
+            <div class="col-md-6">
                 <label for="document-type" class="form-label">Tipo de carro:</label>
                 <div class="input-group">
                     <select class="form-select" id="document-type">
@@ -41,109 +41,118 @@
             </div>
 
             <div>
-                <label for="document-type" class="form-label">Estado
-                    <div id="div__radio-options">
-                        <label for="new-car">
-                            <input id="new-car" type="radio" name="state"> Nuevo
-                        </label>
-                        <label for="used-car">
-                            <input id="used-car" type="radio" name="state"> Usado
-                        </label>
-                    </div>
+                <div class=" col-md-6">
+                    <label for="document-type" class="form-label">Estado
+                        <div id="div__radio-options">
+                            <label for="new-car">
+                                <input id="new-car" type="radio" name="state"> Nuevo
+                            </label>
+                            <label for="used-car">
+                                <input id="used-car" type="radio" name="state"> Usado
+                            </label>
+                        </div>
+                    <div>
+                </div>
+                
             </div>
 
-            <div class="col-md-4">
-                <div class="d-flex align-items-center">
-                    <label for="document-type" class="form-label me-2">Tipo de Combustible:</label>
-                    <div class="input-group">
-                        <select class="form-select form-select-sm" id="document-type">
-                            <option selected>Seleccione...</option>
-                            <option value="1">Gasolina</option>
-                            <option value="2">Diesel</option>
-                            <option value="3">Híbrido</option>
-                            <option value="4">Eléctrico</option>
-                            <option value="5">Gas Natural</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div>
+            <div>
+                <div class="col-md-6">
                     <div class="d-flex align-items-center">
-                        <label for="document-type" class="form-label me-2">Marca:</label>
+                        <label for="document-type" class="form-label me-2">Tipo de Combustible:</label>
                         <div class="input-group">
                             <select class="form-select form-select-sm" id="document-type">
-                                <option value="0">Seleccione...</option>
-                                <option value="1">Chevrolet</option>
-                                <option value="2">Renault</option>
-                                <option value="3">Mazda</option>
-                                <option value="4">Toyota</option>
-                                <option value="5">Nissan</option>
-                                <option value="6">Ford</option>
-                                <option value="7">Kia</option>
-                                <option value="8">Hyundai</option>
-                                <option value="9">Volkswagen</option>
-                                <option value="10">Honda</option>
-                                <option value="11">Mercedes Benz</option>
-                                <option value="12">BMW</option>
-                                <option value="13">Audi</option>
-                                <option value="14">Jeep</option>
-                                <option value="15">Fiat</option>
-                                <option value="16">Peugeot</option>
-                                <option value="17">Suzuki</option>
-                                <option value="18">Volvo</option>
-                                <option value="19">Subaru</option>
-                                <option value="20">Citroën</option>
-                                <option value="21">Chrysler</option>
-                                <option value="22">Porsche</option>
-                                <option value="23">Land Rover</option>
-                                <option value="24">Jaguar</option>
-                                <option value="25">Mini</option>
-                                <option value="26">Dodge</option>
-                                <option value="27">Mitsubishi</option>
-                                <option value="28">Seat</option>
-                                <option value="29">Infiniti</option>
-                                <option value="30">Lexus</option>
-                                <option value="31">Acura</option>
-                                <option value="32">Alfa Romeo</option>
-                                <option value="33">Bentley</option>
-                                <option value="34">Buick</option>
-                                <option value="35">Cadillac</option>
-                                <option value="36">Dacia</option>
-                                <option value="37">Daewoo</option>
-                                <option value="38">Daihatsu</option>
-                                <option value="39">Ferrari</option>
-                                <option value="40">Hummer</option>
-                                <option value="41">Isuzu</option>
-                                <option value="42">Lamborghini</option>
-                                <option value="43">Lancia</option>
-                                <option value="44">Lotus</option>
-                                <option value="45">Maserati</option>
-                                <option value="46">Maybach</option>
-                                <option value="47">MG</option>
-                                <option value="48">Rolls Royce</option>
-                                <option value="49">Saab</option>
-                                <option value="50">Otro</option>
+                                <option selected>Seleccione...</option>
+                                <option value="1">Gasolina</option>
+                                <option value="2">Diesel</option>
+                                <option value="3">Híbrido</option>
+                                <option value="4">Eléctrico</option>
+                                <option value="5">Gas Natural</option>
                             </select>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="d-flex align-items-center">
+                            <label for="document-type" class="form-label me-2">Marca:</label>
+                            <div class="input-group">
+                                <select class="form-select form-select-sm" id="document-type">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="1">Chevrolet</option>
+                                    <option value="2">Renault</option>
+                                    <option value="3">Mazda</option>
+                                    <option value="4">Toyota</option>
+                                    <option value="5">Nissan</option>
+                                    <option value="6">Ford</option>
+                                    <option value="7">Kia</option>
+                                    <option value="8">Hyundai</option>
+                                    <option value="9">Volkswagen</option>
+                                    <option value="10">Honda</option>
+                                    <option value="11">Mercedes Benz</option>
+                                    <option value="12">BMW</option>
+                                    <option value="13">Audi</option>
+                                    <option value="14">Jeep</option>
+                                    <option value="15">Fiat</option>
+                                    <option value="16">Peugeot</option>
+                                    <option value="17">Suzuki</option>
+                                    <option value="18">Volvo</option>
+                                    <option value="19">Subaru</option>
+                                    <option value="20">Citroën</option>
+                                    <option value="21">Chrysler</option>
+                                    <option value="22">Porsche</option>
+                                    <option value="23">Land Rover</option>
+                                    <option value="24">Jaguar</option>
+                                    <option value="25">Mini</option>
+                                    <option value="26">Dodge</option>
+                                    <option value="27">Mitsubishi</option>
+                                    <option value="28">Seat</option>
+                                    <option value="29">Infiniti</option>
+                                    <option value="30">Lexus</option>
+                                    <option value="31">Acura</option>
+                                    <option value="32">Alfa Romeo</option>
+                                    <option value="33">Bentley</option>
+                                    <option value="34">Buick</option>
+                                    <option value="35">Cadillac</option>
+                                    <option value="36">Dacia</option>
+                                    <option value="37">Daewoo</option>
+                                    <option value="38">Daihatsu</option>
+                                    <option value="39">Ferrari</option>
+                                    <option value="40">Hummer</option>
+                                    <option value="41">Isuzu</option>
+                                    <option value="42">Lamborghini</option>
+                                    <option value="43">Lancia</option>
+                                    <option value="44">Lotus</option>
+                                    <option value="45">Maserati</option>
+                                    <option value="46">Maybach</option>
+                                    <option value="47">MG</option>
+                                    <option value="48">Rolls Royce</option>
+                                    <option value="49">Saab</option>
+                                    <option value="50">Otro</option>
+                                </select>
+                                <input type="text" class="form-control" placeholder="Otra Marca" id="name" name="name">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
 
-            <div>
-                <label for="document-type" class="form-label me-2">Modelo:</label>
-                <input type="text" placeholder="">
-            </div>
-            <div>
-                <label for="document-type" class="form-label me-2">Año:</label>
-                <input type="text" placeholder="">
+            <div class="col-3">
+                <label for="document-type" class="form-label">Modelo:</label>
+                <input type="text" class="form-control" placeholder="">
             </div>
 
-            <div>
-                <label for="date" style="margin-right: 10px;">Fecha de publicación</label>
+            <div class="col-3">
+                <label for="document-type" class="form-label">Año:</label>
+                <input type="text" class="form-control" placeholder="">
+            </div>
+            <h2></h2>
+            <div class="col-6">
+                <label for="date" style="margin-right: 20px;">Fecha de publicación:</label>
                 <input type="date" id="date" name="date">
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <label for="document-type" class="form-label">Transmision:</label>
                 <div class="input-group">
                     <select class="form-select" id="document-type">
@@ -156,32 +165,35 @@
                 </div>
             </div>
 
-            <div>
-                <label for="document-type" class="form-label me-2">Motor:</label>
-                <input type="text" placeholder="">
+            <div class="col-3">
+                <label for="document-type" class="form-label">Motor:</label>
+                <input type="text" class="form-control" placeholder="">
             </div>
 
+            <h2></h2>
             <div>
-                <label for="price">
-                    <label for="price" style="margin-right: 0px;">Precio:</label>
-                    <input type="number " id="price" name="price" style="margin-right: 0px;">
-                    <select>
-                        <option value="0">Seleccione...</option>
-                        <option value="1">COP</option>
-                        <option value="2">USD</option>
-                        <option value="3">EUR</option>
-                        <option value="4">Otro</option>
-                    </select>
-                    <input type="text" placeholder="Otro">
-                </label>
+                <div class="col-md-6">
+                    <label for="price">
+                        <label for="price" style="margin-right: 0px;">Precio:</label>
+                        <input type="number " id="price" name="price" style="margin-right: 0px;">
+                        <select>
+                            <option value="0">Seleccione...</option>
+                            <option value="1">COP</option>
+                            <option value="2">USD</option>
+                            <option value="3">EUR</option>
+                            <option value="4">Otro</option>
+                        </select>
+                        <input type="text" placeholder="Otro">
+                    </label>
+                </div>
             </div>
-
-            <label for="description">Descripción:</label>
-            <textarea id="description" name="description"></textarea>
-            <div>
-                <button type="submit">Enviar</button>
+            
+            <h2></h2>
+            <div class="row w-100 m-2">
+                <div class="col-md-6">
+                    <button type="submit" class="">Registrar</button>
+                </div>
             </div>
-
         </form>
     </div>
 </body>
