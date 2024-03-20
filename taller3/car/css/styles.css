@@ -37,7 +37,6 @@ select {
     appearance: none; /* Elimina el estilo por defecto del navegador */
 }
 
-
 button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;

@@ -4,7 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro Gustos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="radio"],
+        input[type="range"],
+        button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 
 </head>
 
@@ -33,27 +83,33 @@
         <input type="radio" id="habilitar-registro" name="habilitar" onclick="mostrarRegistro()">
         <label for="habilitar-registro">Habilitar Registro de Gustos</label><br>
 
-        <button type="submit">Guardar</button>
+        <div id="price-range-container" style="display: none;">
+            <label for="price-range">Valor Maximo y Minimo:</label>
+            <br>
+            <input type="range" id="price-range" name="price-range" min="0" max="100" step="1" value="0" size="100">
+        </div>
+
+        <button type="submit" id="guardar-btn" style="display: none;">Guardar</button>
     </form>
 
     <script>
         function mostrarRegistro() {
             var registroGustos = document.getElementById('registro-gustos');
             var habilitarRegistro = document.getElementById('habilitar-registro');
+            var priceRangeContainer = document.getElementById('price-range-container');
+            var guardarBtn = document.getElementById('guardar-btn');
 
             if (habilitarRegistro.checked) {
                 registroGustos.style.display = 'block';
+                priceRangeContainer.style.display = 'block';
+                guardarBtn.style.display = 'block';
             } else {
                 registroGustos.style.display = 'none';
+                priceRangeContainer.style.display = 'none';
+                guardarBtn.style.display = 'none';
             }
         }
     </script>
-
-    <div style="width: 200px; margin: 150px auto;">
-        <label for="price-range">Valor Maximo y Minimo:</label>
-        <br>
-        <input type="range" id="price-range" name="price-range" min="0" max="100" step="1" value="50" size="100">
-    </div>
-
 </body>
+
 </html>
