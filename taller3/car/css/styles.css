@@ -76,3 +76,19 @@ textarea{
     width: 100%;
     resize: none;
 }
+
+input[type="color"]{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+#div__select_color{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.__hidden {
+    display: none;
+}

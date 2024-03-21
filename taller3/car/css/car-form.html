@@ -174,20 +174,22 @@
             <label for="description"> Descripción: </label>
             <textarea id="description" name="description"></textarea>
             Registrar preferencias de usuario
-            <div >
-                <label for="new-car1">
-                    <input type="radio" name="car-condition" id="new-car1"/> Sí
+            <div id="div__register_preferences_option">
+                <label for="car-preferences-no">
+                    <input type="radio" name="radio__register_preferences" id="car-preferences-no" checked/> No
                 </label>
-                <label for="used-car1">
-                    <input type="radio" name="car-condition" id="new-car1"/> No
+                <label for="car-preferences-yes">
+                    <input type="radio" name="radio__register_preferences" id="car-preferences-yes"/> Sí
                 </label>
             </div>
 
-            <div id="div__preferences" style="display:none;">
+            <div id="div__preferences_toggle" class="__hidden">
                 <h2>Registrar preferencias de usuario</h2>
+                <div id="div__select_color">
                 <label for="favorite-color">Color favorito:</label>
-                <input type="text" id="favorite-color" name="favorite-color"><br>
-        
+                <input type="color" id="favorite-color" name="favorite-color"><br>
+                </div>
+
                 <label for="favorite-brand">Marca de carro favorita:</label>
                 <input type="text" id="favorite-brand" name="favorite-brand"><br>
         
@@ -197,25 +199,12 @@
                 <label for="favorite-model">Modelo de carro que más le gusta:</label>
                 <input type="text" id="favorite-model" name="favorite-model"><br>
             </div>
-
-            <script>
-                const divPreferences = document.getElementById('div__preferences');
-                const newCarRadio = document.getElementById('new-car1');
-        
-                newCarRadio.addEventListener('change', function() {
-                    if (newCarRadio.checked) {
-                        divPreferences.style.display = 'block';
-                    } else {
-                        divPreferences.style.display = 'none';
-                    }
-                });
-            </script>
-
             <div>
                 <button type="submit">Enviar</button>
             </div>
         </div>
     </form>
+    <script src="./car.js"></script>
 </div>
 </body>
 </html>
