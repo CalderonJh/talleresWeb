@@ -1,7 +1,27 @@
 body{
     display: flex;
+    justify-content: center;
     background-color: #a3d3eb;
     margin: 2rem;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #000;
+    display: block;
+    box-sizing: unset   ;
+}
+
+.main-div{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #ffffff;*/
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 label, div{
@@ -25,7 +45,7 @@ input {
 }
 
 #div__radio-options{
-    margin: 0px 15px 10px 10px;
+    margin: 0 15px 10px 10px;
 }
 
 select {
@@ -43,4 +63,16 @@ button {
     margin: 15px 0 2px 0;
     padding: 8px 15px;
     border-radius: 12px;
+}
+
+textarea{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    margin: 8px 2px 2px 2px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    padding: 5px 2px;
+    height: 80px;
+    width: 100%;
+    resize: none;
 }
