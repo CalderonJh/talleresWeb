@@ -176,12 +176,41 @@
             Registrar preferencias de usuario
             <div >
                 <label for="new-car">
-                    <input type="radio" name="state"/> Sí
+                    <input type="radio" name="car-condition" id="new-car"/> Sí
                 </label>
                 <label for="used-car">
-                    <input type="radio" name="state"/> No
+                    <input type="radio" name="car-condition" id="new-car"/> No
                 </label>
             </div>
+
+            <div id="div__preferences" style="display:none;">
+                <h2>Registrar preferencias de usuario</h2>
+                <label for="favorite-color">Color favorito:</label>
+                <input type="text" id="favorite-color" name="favorite-color"><br>
+        
+                <label for="favorite-brand">Marca de carro favorita:</label>
+                <input type="text" id="favorite-brand" name="favorite-brand"><br>
+        
+                <label for="favorite-style">Estilo de carro favorito:</label>
+                <input type="text" id="favorite-style" name="favorite-style"><br>
+        
+                <label for="favorite-model">Modelo de carro que más le gusta:</label>
+                <input type="text" id="favorite-model" name="favorite-model"><br>
+            </div>
+
+            <script>
+                const divPreferences = document.getElementById('div__preferences');
+                const newCarRadio = document.getElementById('new-car');
+        
+                newCarRadio.addEventListener('change', function() {
+                    if (newCarRadio.checked) {
+                        divPreferences.style.display = 'block';
+                    } else {
+                        divPreferences.style.display = 'none';
+                    }
+                });
+            </script>
+
             <div id="div__preferences">
                 div para registrar preferencias de usuario,
                 solo debe aparecer si el usuario selecciona "Sí" en el radio button anterior
