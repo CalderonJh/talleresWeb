@@ -175,11 +175,11 @@
             <textarea id="description" name="description"></textarea>
             Registrar preferencias de usuario
             <div >
-                <label for="new-car">
-                    <input type="radio" name="car-condition" id="new-car"/> Sí
+                <label for="new-car1">
+                    <input type="radio" name="car-condition" id="new-car1"/> Sí
                 </label>
-                <label for="used-car">
-                    <input type="radio" name="car-condition" id="new-car"/> No
+                <label for="used-car1">
+                    <input type="radio" name="car-condition" id="new-car1"/> No
                 </label>
             </div>
 
@@ -200,7 +200,7 @@
 
             <script>
                 const divPreferences = document.getElementById('div__preferences');
-                const newCarRadio = document.getElementById('new-car');
+                const newCarRadio = document.getElementById('new-car1');
         
                 newCarRadio.addEventListener('change', function() {
                     if (newCarRadio.checked) {
