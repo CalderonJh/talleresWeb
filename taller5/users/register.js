@@ -8,6 +8,16 @@ $(document).ready(function () {
     event.preventDefault();
     validate();
   });
+  $("#disease__checkbox").change(function () {
+    const isActive = $("#disease__checkbox").prop("checked");
+    if (isActive) $("#disease_checked__div").removeClass("hidden");
+    else $("#disease_checked__div").addClass("hidden");
+  });
+  $("#contagion__checkbox").change(function () {
+    const isActive = $("#contagion__checkbox").prop("checked");
+    if (isActive) $("#textarea__div").removeClass("hidden");
+    else $("#textarea__div").addClass("hidden");
+  })
 });
 
 const months = {
@@ -63,7 +73,7 @@ const validateAge = () => {
   const err = ageError(day, month, year);
   console.log(day, month, year, err);
   if (!err) {
-    calculateAge(day, month, year);
+    showAge(day, month, year);
     monthInput.val(months[month]);
     dayInput.val(day);
     return;
@@ -94,39 +104,65 @@ const validateUsername = () => {
 };
 
 const validatePassword = () => {
-  const err = passwordError(passwordInput.val())
-  if(!validateError(passwordInput, err, 'password'))
-    confirmPassword();
-}
+  const err = passwordError(passwordInput.val());
+  if (!validateError(passwordInput, err, "password")) confirmPassword();
+};
 
 const confirmPassword = () => {
-  const err = confirmPasswordError(confirmPasswordInput.val())
-  validateError(confirmPasswordInput, err, 'password')
-}
+  const err = confirmPasswordError(confirmPasswordInput.val());
+  validateError(confirmPasswordInput, err, "password");
+};
 
 const validateError = (input, err, name) => {
   if (err) highlightBorder(input);
   const elementId = "#" + name + "__small";
   const small = $(elementId);
-  console.log(small, elementId, err)
+  console.log(small, elementId, err);
   small.text(err);
   small.css("color", "#f87171");
   return err.length > 0;
 };
 
-const calculateAge = (d, m, y) => {
+function calculateAge(day, month, year) {
+  let currentDay = currentDate.getDate();
+  let currentMonth = currentDate.getMonth() + 1;
+  let currentYear = currentDate.getFullYear();
+
+  let yearsOld = currentYear - year;
+  let monthOld = currentMonth - month;
+  let daysOld = currentDay - day;
+
+  if (monthOld < 0 || (monthOld === 0 && daysOld < 0)) {
+    yearsOld--;
+    monthOld += 12;
+    if (daysOld < 0) {
+      monthOld--;
+      daysOld += new Date(currentYear, currentMonth - 1, 0).getDate();
+    }
+  }
+
+  return {
+    years: yearsOld,
+    months: monthOld,
+    days: daysOld,
+  };
+}
+
+const showAge = (dd, mm, yyyy) => {
+  const age = calculateAge(dd, mm, yyyy);
   const msgSmall = $("#dob__small");
-  let age = currentYear - y;
-  if (m > currentMonth || (m === currentMonth && d > currentDay)) {
-    age--;
-  }
-  if (age === 0) {
-    age = currentMonth;
-    if (d > currentDay) age--;
-    msgSmall.text(`Tienes ${age} meses`);
-  }
+  const msg = getAgeMessage(age);
   msgSmall.css("color", "#eff6ff");
-  msgSmall.text(`Tienes ${age} años`);
+  msgSmall.text(msg);
+};
+
+const getAgeMessage = (age) => {
+  const { years, months, days } = age;
+  if (years < 0) return "Fecha de nacimiento inválida";
+  if (years === 0 && months === 0 && days === 0) return "Recién nacido";
+  if (years === 0 && months === 0) return `Tienes ${days} días`;
+  if (years === 0) return `Tienes ${months} meses y ${days} días`;
+  return `Tienes ${years} años, ${months} meses y ${days} días`;
 };
 
 const getMonthNumber = () => {
@@ -195,8 +231,7 @@ const lastnameError = (lastname) => {
 
 const documentNumberError = (documentNumber) => {
   if (!documentNumber) return "Ingrese un número de documento";
-  if (!documentNumber.match(/^[0-9]+$/))
-    return "Solo números son permitidos";
+  if (!documentNumber.match(/^[0-9]+$/)) return "Solo números son permitidos";
   if (documentNumber.length < 7) return "Número de documento demasiado corto";
   if (documentNumber.length > 20) return "Número de documento demasiado largo";
   return "";
@@ -240,9 +275,6 @@ const passwordError = (password) => {
 
 const confirmPasswordError = (password2) => {
   if (!password2) return "Confirmar contraseña";
-  if (password2 !== passwordInput.val())
-    return "Las contraseñas no coinciden";
+  if (password2 !== passwordInput.val()) return "Las contraseñas no coinciden";
   return "";
 };
-
-
