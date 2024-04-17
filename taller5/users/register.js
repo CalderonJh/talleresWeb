@@ -10,8 +10,13 @@ $(document).ready(function () {
   });
   $("#disease__checkbox").change(function () {
     const isActive = $("#disease__checkbox").prop("checked");
-    if (isActive) $("#disease_checked__div").removeClass("hidden");
-    else $("#disease_checked__div").addClass("hidden");
+    if (isActive) $("#contagion_option__div").removeClass("hidden");
+    else {
+      $("#contagion_option__div").addClass("hidden");
+      $("#contagion__checkbox").prop("checked", false);
+      $("#textarea__div").addClass("hidden"); 
+    }
+    console.log(isActive)
   });
   $("#contagion__checkbox").change(function () {
     const isActive = $("#contagion__checkbox").prop("checked");
