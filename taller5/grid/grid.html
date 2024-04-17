@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../users/tailwind.css">
+    <title>Users grid</title>
+
+</head>
+<body>
+<div class="container mt">
+    <h2>Grilla de usuarios </h2>
+    <div class="sticky right-0">
+        hola
+    </div>
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">User Data Table</h1>
+        <!-- Table -->
+        <div class="overflow-x-auto">
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <!-- Table Header -->
+                <thead class="bg-gray-200">
+                <tr>
+                    <th class="px-4 py-2">ID</th>
+                    <th class="px-4 py-2">Name</th>
+                    <th class="px-4 py-2">Username</th>
+                    <th class="px-4 py-2">Email</th>
+                    <th class="px-4 py-2">Phone</th>
+                    <th class="px-4 py-2">Website</th>
+                </tr>
+                </thead>
+                <!-- Table Body -->
+                <tbody>
+                <!-- Iterate over JSON data -->
+                <tr class="bg-white">
+                    <td class="px-4 py-2">1</td>
+                    <td class="px-4 py-2">Leanne Graham</td>
+                    <td class="px-4 py-2">Bret</td>
+                    <td class="px-4 py-2">Sincere@april.biz</td>
+                    <td class="px-4 py-2">1-770-736-8031 x56442</td>
+                    <td class="px-4 py-2">hildegard.org</td>
+                </tr>
+                <!-- Repeat this block for each JSON object -->
+                <!-- You can use JavaScript to dynamically generate these rows -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="./grid.js"></script>
+</body>
+</html>
