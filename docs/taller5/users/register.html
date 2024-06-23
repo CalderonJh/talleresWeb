@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./tailwind.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>User Tailwind</title>
+  </head>
+  <body>
+    <div class="w-screen h-screen flex justify-center bg-[#23495c]">
+      <div class="mt-10 lg:w-1/2 sm:w-2/3">
+        <div class="text-2xl text-blue-50">Datos de usuario</div>
+        <form class="mt-3" id="register-form">
+          <div class="mt-2 flex justify-between w-full gap-2">
+            <input
+              class="w-1/2 h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              placeholder="Nombre"
+              id="name__input"
+            />
+            <input
+              class="w-1/2 h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              placeholder="Apellido"
+              id="last_name__input"
+            />
+          </div>
+          <small class="text-[14px] text-red-400" id="name__small"></small>
+
+          <div class="mt-3">
+            <label class="text-blue-50">Fecha de nacimiento</label>
+            <div class="mt-1 flex gap-2">
+              <input
+                id="dob-day"
+                placeholder="Dia"
+                class="w-1/5 h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              />
+              <input
+                id="dob-month"
+                placeholder="Mes"
+                class="w-2/5 ml-2 h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              />
+              <input
+                id="dob-year"
+                placeholder="Año"
+                class="w-2/5 h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              />
+            </div>
+            <small class="text-[14px] text-red-400" id="dob__small"></small>
+          </div>
+          <div class="flex w-full mt-3 gap-2">
+            <div class="w-1/5">
+              <select
+                class="w-full h-10 bg-transparent text-blue-50 border-2 border-blue-50 py-2 px-4"
+                id="document-type"
+                name="address"
+              >
+                <option class="bg-[#23495c]" value="1">CC</option>
+                <option class="bg-[#23495c]" value="2">TI</option>
+                <option class="bg-[#23495c]" value="3">CE</option>
+              </select>
+            </div>
+            <div class="w-full">
+              <input
+                class="w-full h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50"
+                placeholder="Número de documento"
+                type="text"
+                id="document__input"
+              />
+            </div>
+          </div>
+          <small class="text-[14px] text-red-400" id="document__small"></small>
+
+          <div class="mt-3 w-full flex gap-2">
+            <input
+              class="w-3/5 h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              placeholder="Email"
+              type="email"
+              id="email__input"
+            />
+            <input
+              class="w-2/5 h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              placeholder="Telefono"
+              type="text"
+              id="phone__input"
+            />
+          </div>
+          <small class="text-[14px] text-red-400" id="contact__small"></small>
+
+          <div class="mt-3">
+            <input type="checkbox" id="disease__checkbox" />
+            <label class="text-blue-50">Ha sufrido enfermedades</label>
+          </div>
+          <div class="mt-1.5 ml-2 hidden" id="contagion_option__div">
+            <input type="checkbox" id="contagion__checkbox" />
+            <label class="text-blue-50">La enfermedad es contagiosa</label>
+          </div>
+          <div class="mt-3 w-full gap-2 hidden" id="textarea__div">
+            <textarea
+              class="w-full h-13 ml-2 px-3 py-3 text-blue-50 resize-none placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              placeholder="Cuales"
+              type="text"
+              id="diseases__textarea"
+            ></textarea>
+          </div>
+          <div class="mt-5 text-lg text-blue-50">Registro</div>
+
+          <div class="mt-3 w-full flex gap-2">
+            <input
+              class="w-full h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              placeholder="Usuario"
+              type="text"
+              id="username__input"
+            />
+          </div>
+          <small class="text-[14px] text-red-400" id="username__small"></small>
+
+          <div class="w-full flex gap-2 mt-3">
+            <input
+              class="w-1/2 h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              placeholder="Contraseña"
+              type="password"
+              id="password__input"
+            />
+            <input
+              class="w-1/2 h-10 px-3 py-3 text-blue-50 placeholder-blue-gray-700 bg-transparent border-2 border-blue-50 focus:outline-none"
+              placeholder="Confirmar contraseña"
+              type="password"
+              id="confirm__input"
+            />
+          </div>
+          <small class="text-[14px] text-red-400" id="password__small"></small>
+
+          <div class="flex mt-4 justify-items-start">
+            <div class="col-4">
+              <button
+                type="submit"
+                class="border-2 border-blue-50 px-3 py-2 text-blue-50 hover:text-green-200"
+              >
+                Registrar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./register.js"></script>
+  </body>
+</html>

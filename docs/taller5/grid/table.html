@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilla de usuarios</title>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-6">
+<div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Users</h1>
+    <!-- Table -->
+    <div class="overflow-x-auto">
+        <table id="user-table" class="table-auto w-full border-collapse border border-gray-300">
+            <!-- Table Header -->
+            <thead class="bg-gray-200">
+            <tr>
+                <th class="px-4 py-2">ID</th>
+                <th class="px-4 py-2">Name</th>
+                <th class="px-4 py-2">Username</th>
+                <th class="px-4 py-2">Email</th>
+                <th class="px-4 py-2">Phone</th>
+                <th class="px-4 py-2">Website</th>
+            </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody id="user-table-body">
+            <!-- Data will be loaded dynamically here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="./grid.js"></script>
+</body>
+
+</html>
